@@ -14,7 +14,7 @@ export default function Header() {
       <nav className={open ? "nav open" : "nav"} aria-label="Hlavní navigace">
         <Link href="/" onClick={close}>Úvod</Link>
         <Link href="/#sluzby" onClick={close}>Produkty a služby</Link>
-        <Link href="/blog" onClick={close}>Blog</Link>
+        <Link href="/blog" onClick={close}>Novinky</Link>
         <Link href="/#kontakt" onClick={close}>Kontakt</Link>
       </nav>
       <Link className="button button-green header-cta" href="/#poptavka">Nezávazná poptávka</Link>
