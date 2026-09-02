@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Check, EnvelopeSimple, MapPin, Phone } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, ChartLineUp, Check, CloudArrowUp, EnvelopeSimple, MapPin, Phone, Wrench } from "@phosphor-icons/react/dist/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -15,6 +15,13 @@ export default function Home() {
       <div className="container hero-inner">
         <div className="hero-copy"><span className="eyebrow">Ryze česká společnost</span><h1>Sunpower —<br /><em>smysluplné energie</em></h1><p>Vítáme vás na webu společnosti SUNPOWER s.r.o. Zaměřujeme se na energetické koncepce, využívání a ukládání jednotlivých druhů energií s důrazem na nejvyšší efektivnost.</p><div className="hero-note">Energetická řešení · projekt · realizace · optimalizace</div><div className="hero-actions"><Link className="button button-gold" href="#sluzby">Naše řešení <ArrowRight /></Link><Link className="plain-link" href="#poptavka">Chci konzultaci</Link></div></div>
         <div className="hero-visual"><div className="image-frame publication"><Image src="/images/publicita-page.jpg" fill sizes="(max-width: 900px) 100vw, 54vw" alt="Projekt EGREAL spolufinancovaný Evropskou unií" priority /></div></div>
+      </div>
+    </section>
+
+    <section className="remote-intro">
+      <div className="container remote-intro-grid">
+        <div className="remote-copy"><span className="eyebrow">Nový model spolupráce</span><h2>Regulace připravená na dálku.<br /><em>Zapojená místním elektrikářem.</em></h2><p>Navrhneme zapojení, dodáme kompletně vystrojený rozvaděč a po připojení k internetu systém vzdáleně naprogramujeme, zkontrolujeme a odladíme.</p><div className="remote-benefits"><div><Wrench /><span><strong>Jednoduchá montáž</strong>Místní technik zapojí zařízení podle jasně označeného schématu.</span></div><div><CloudArrowUp /><span><strong>Vzdálené spuštění</strong>Náš specialista provede programování a kontrolu přes internet.</span></div><div><ChartLineUp /><span><strong>Data pod kontrolou</strong>Vizualizace, statistiky a optimalizace provozu odkudkoliv.</span></div></div><Link href="/dalkove-programovani-regulaci" className="button button-gold">Jak spolupráce funguje <ArrowRight /></Link></div>
+        <div className="remote-visual"><div className="remote-main-image"><Image src="/images/regulation-visualization-house.jpeg" fill sizes="(max-width: 800px) 100vw, 48vw" alt="Vizualizace dálkově řízeného energetického systému" /></div><div className="remote-small-image"><Image src="/images/regulation-graph.jpeg" fill sizes="260px" alt="Graf měřených hodnot regulace" /></div><div className="remote-status"><span></span> Připojeno k systému</div></div>
       </div>
     </section>
 

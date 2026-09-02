@@ -13,6 +13,7 @@ export default function Header() {
       <Link href="/" aria-label="Sunpower – domů"><Image src="/logo.svg" width={160} height={83} alt="Sunpower" priority /></Link>
       <nav className={open ? "nav open" : "nav"} aria-label="Hlavní navigace">
         <Link href="/" onClick={close}>Úvod</Link>
+        <Link href="/dalkove-programovani-regulaci" onClick={close}>Regulace</Link>
         <Link href="/#sluzby" onClick={close}>Produkty a služby</Link>
         <Link href="/blog" onClick={close}>Novinky</Link>
         <Link href="/#kontakt" onClick={close}>Kontakt</Link>
