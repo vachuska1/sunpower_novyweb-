@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 210" fill="none">
+  <path d="m15 154 111-61 103 61-111 53Z" fill="#f0ede5"/>
+  <!-- Two adjoining, self-supporting modules -->
+  <path d="m37 102 64 35v48l-64-35Z" fill="#e6d8b7"/>
+  <path d="m101 137 84-46v48l-84 46Z" fill="#c3ad82"/>
+  <path d="m28 99 86-47 80 43-92 51Z" fill="#d99a00"/>
+  <path d="m28 99 74 40 92-50v7l-92 50-74-40Z" fill="#b47b12"/>
+  <path d="m74 91 40-22 51 27-40 22Z" fill="#315569" stroke="#fff" stroke-width="2"/>
+  <path d="m87 84 51 27m-37-35 51 28m-64-4 39-22" stroke="#a6c6ce" stroke-width="1.5"/>
+  <path d="m48 117 18 10v24l-18-10Zm26 14 17 9v30l-17-9Z" fill="#fffaf0"/>
+  <path d="m114 141 22-12v24l-22 12Zm32-18 25-13v24l-25 14Z" fill="#82bdc9" stroke="#f6f1e7" stroke-width="3"/>
+  <path d="m142 118 0 45" stroke="#9c8156" stroke-width="2" stroke-dasharray="4 3"/>
+  <!-- Separate battery / technology cabinet -->
+  <path d="m168 155 20-11 21 12-20 11Z" fill="#ebe8df"/>
+  <path d="m168 155 21 12v29l-21-12Z" fill="#bfc4c1"/>
+  <path d="m189 167 20-11v29l-20 11Z" fill="#8d9993"/>
+  <path d="m198 167-5 12 5-2-2 11 7-15-5 3Z" fill="#fff3ba"/>
+  <!-- Water collection tank -->
+  <path d="M193 108v28c0 9 29 9 29 0v-28" fill="#84bfca"/>
+  <ellipse cx="207.5" cy="108" rx="14.5" ry="7" fill="#b9dce2"/>
+  <path d="M198 126c4 3 14 3 19 0m-19 8c4 3 14 3 19 0" stroke="#d6edf0" stroke-width="2"/>
+  <path d="M185 98h5v15h4" stroke="#a7a89e" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="45" cy="53" r="12" fill="#f2bd42"/>
+  <path d="M45 32v-5m0 52v-5M24 53h-5m52 0h-5M30 38l-4-4m38 38-4-4M30 68l-4 4m38-38-4 4" stroke="#f2bd42" stroke-width="3" stroke-linecap="round"/>
+</svg>
