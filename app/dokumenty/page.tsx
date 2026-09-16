@@ -1,5 +1,17 @@
-import { DownloadSimple } from "@phosphor-icons/react/dist/ssr";
+import { FilePdf } from "@phosphor-icons/react/dist/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-export default function Documents() { return <><Header /><main className="subpage"><section className="subpage-head"><div className="container"><h1>Dokumenty</h1><p>Důležité firemní a produktové dokumenty. Soubory doplníme před finálním spuštěním webu.</p></div></section><section className="documents"><div className="container"><div><span>Obchodní dokument</span><h2>Všeobecné obchodní podmínky</h2><DownloadSimple /></div><div><span>Informace pro zákazníky</span><h2>Poučení spotřebitele</h2><DownloadSimple /></div><div><span>Ochrana soukromí</span><h2>Zásady ochrany osobních údajů</h2><DownloadSimple /></div></div></section></main><Footer /></> }
+const documents = [
+  ["Formulář – Odstoupení od smlouvy", "/documents/Formular-Odstoupeni-od-smlouvy.pdf"],
+  ["Poučení spotřebitele o právu na odstoupení od smlouvy uzavřené distančním způsobem", "/documents/Pouceni-spotrebitele-o-pravu-na-odstoupeni-od-smlouvy-uzavrene-distancnim-zpusobem.pdf"],
+  ["VOP – klimastena.cz", "/documents/VOP-klimastena.cz_.pdf"],
+  ["VOP – sunpower.cz", "/documents/VOP-sunpower.cz-.pdf"],
+] as const;
+
+export default function Documents() {
+  return <><Header /><main className="subpage documents-page">
+    <section className="documents-head"><div className="container"><span>Dokumenty</span><h1>Letáky, katalogy<br />a další dokumenty ke stažení</h1></div></section>
+    <section className="documents"><div className="container">{documents.map(([title, href]) => <a href={href} target="_blank" rel="noreferrer" key={href}><FilePdf weight="duotone" /><h2>{title}</h2></a>)}</div></section>
+  </main><Footer /></>;
+}
