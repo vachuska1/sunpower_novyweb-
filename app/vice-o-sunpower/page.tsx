@@ -3,11 +3,9 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Více o SUNPOWER",
-  description: "Koncepce regulace pro vzdálený přístup, spolupráce s montážními partnery a hardware Technische Alternative.",
-};
+export const metadata: Metadata = pageMetadata({ title: "Více o SUNPOWER", description: "Model spolupráce SUNPOWER s elektrikáři a instalatéry, dálkové programování a regulace Technische Alternative pro Česko a Slovensko.", path: "/vice-o-sunpower", image: "/images/regulation-visualization-house.jpeg" });
 
 const sections = [
   {

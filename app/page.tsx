@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChartLineUp, Check, CloudArrowUp, EnvelopeSimple, MapPin, Phone, Wrench } from "@phosphor-icons/react/dist/ssr";
@@ -8,6 +9,13 @@ import Gallery from "@/components/Gallery";
 import ProjectGallery from "@/components/ProjectGallery";
 import Partners from "@/components/Partners";
 import { services } from "@/lib/services";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Energetická řešení, regulace a management",
+  description: "SUNPOWER navrhuje a realizuje energetické koncepce, řízení budov, vytápění, chlazení, akumulaci energie a energetický management.",
+  path: "/",
+});
 
 export default function Home() {
   return <><Header /><main>
@@ -32,12 +40,12 @@ export default function Home() {
 
     <section className="about"><div className="container about-grid"><div className="about-collage"><Image src="/images/gallery-2.jpg" fill sizes="50vw" alt="Realizace technologií Sunpower" /><div className="about-badge">Od návrhu<br />po spuštění</div></div><div className="about-copy"><h2>Energie musí fungovat jako jeden celek</h2><p>Nedodáváme izolované technologie. Díváme se na budovu komplexně a hledáme řešení, které bude spolehlivé, úsporné a příjemné pro každodenní používání.</p><ul><li><Check weight="bold" /> Vlastní návrh a projektová příprava</li><li><Check weight="bold" /> Ověřené technologie a zkušený tým</li><li><Check weight="bold" /> Servis a dlouhodobá optimalizace</li></ul><Link className="plain-link" href="#poptavka">Probrat moje řešení <ArrowRight /></Link></div></div></section>
 
-    <section className="contact-section" id="poptavka"><div className="container contact-grid"><div className="contact-intro"><h2>Najdeme pro Vás smysluplné řešení.</h2><p>Popište nám svou představu. Ozveme se, probereme možnosti a doporučíme další postup.</p><div className="contact-lines"><a href="tel:+420734571415"><Phone /> +420 734 571 415</a><a href="mailto:office@sunpower.cz"><EnvelopeSimple /> office@sunpower.cz</a><a href="https://www.google.com/maps/search/?api=1&query=49.155819%2C15.018243" target="_blank" rel="noreferrer"><MapPin /> <span>Jarošovská 840/II<br />377 02 Jindřichův Hradec</span></a></div><div className="company-identifiers"><span>IČO: 26025655</span><span>DIČ: CZ26025655</span></div><div className="technical-support"><strong>Technická podpora MaR:</strong><span>Ing. Jan Pilný</span><a href="tel:+420734571415">+420 734 571 415</a></div><div className="contact-map"><iframe title="Mapa – SUNPOWER, Jarošovská 840/II, Jindřichův Hradec" src="https://maps.google.com/maps?q=49.155819%2C15.018243&t=k&z=17&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div><ContactForm /></div></section>
+    <section className="contact-section" id="poptavka"><div className="container contact-grid"><div className="contact-intro"><h2>Najdeme pro Vás smysluplné řešení.</h2><p>Popište nám svou představu. Ozveme se, probereme možnosti a doporučíme další postup.</p><div className="contact-lines"><a href="tel:+420603516197"><Phone /> +420 603 516 197</a><a href="mailto:info@sunpower.cz"><EnvelopeSimple /> info@sunpower.cz</a><a href="https://www.google.com/maps/search/?api=1&query=49.155819%2C15.018243" target="_blank" rel="noreferrer"><MapPin /> <span>Jarošovská 840/II<br />377 02 Jindřichův Hradec</span></a></div><div className="company-identifiers"><span>IČO: 26025655</span><span>DIČ: CZ26025655</span></div><div className="technical-support"><strong>Technická podpora MaR:</strong><span>Ing. Jan Pilný</span><a href="tel:+420734571415">+420 734 571 415</a></div><div className="contact-map"><iframe title="Mapa – SUNPOWER, Jarošovská 840/II, Jindřichův Hradec" src="https://maps.google.com/maps?q=49.155819%2C15.018243&t=k&z=17&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div><ContactForm /></div></section>
 
     <section className="gallery-section" id="reference"><div className="container"><div className="section-head"><div><h2>Fotogalerie instalací</h2></div></div></div><Gallery /></section>
 
     <Partners />
 
-    <section className="direct-contact" id="kontakt"><div className="container"><h2>Stačí se ozvat.</h2><a href="mailto:office@sunpower.cz">office@sunpower.cz <ArrowRight /></a></div></section>
+    <section className="direct-contact" id="kontakt"><div className="container"><h2>Stačí se ozvat.</h2><a href="mailto:info@sunpower.cz">info@sunpower.cz <ArrowRight /></a></div></section>
   </main><Footer /></>;
 }

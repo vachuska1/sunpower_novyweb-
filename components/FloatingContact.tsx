@@ -4,9 +4,9 @@ import { ChatCircleDots, EnvelopeSimple, Phone, WhatsappLogo, X } from "@phospho
 import { useState } from "react";
 
 const actions = [
-  { href: "tel:+420734571415", label: "Zavolat", icon: Phone },
-  { href: "mailto:office@sunpower.cz", label: "Napsat e-mail", icon: EnvelopeSimple },
-  { href: "https://wa.me/420734571415", label: "Napsat na WhatsApp", icon: WhatsappLogo, external: true },
+  { href: "tel:+420603516197", label: "Zavolat", icon: Phone },
+  { href: "mailto:info@sunpower.cz", label: "Napsat e-mail", icon: EnvelopeSimple },
+  { href: "https://wa.me/420603516197", label: "Napsat na WhatsApp", icon: WhatsappLogo, external: true },
 ];
 
 export default function FloatingContact() {

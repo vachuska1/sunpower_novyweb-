@@ -17,7 +17,7 @@ Po nahrání do GitHub repozitáře stačí ve Vercelu zvolit **Add New → Proj
 
 ## Před ostrým spuštěním
 
-- Napojit formulář na e-mailovou službu (například Resend) a přidat příslušný API klíč do Vercelu.
+- Kontaktní formulář používá Resend. Ve Vercelu nastavte `RESEND_API_KEY`, `CONTACT_TO_EMAIL` a `CONTACT_FROM_EMAIL` podle `.env.example`. Testovací příjemce je `odhadyvachuska@gmail.com`; pro ostrý provoz změňte `CONTACT_TO_EMAIL` na `info@sunpower.cz`.
 - Doplnit finální PDF dokumenty na stránku `/dokumenty`.
 - Zkontrolovat a případně upravit texty, telefon a firemní údaje.
 - Přesměrovat doménu `sunpower.cz` až po schválení náhledu.

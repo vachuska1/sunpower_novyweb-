@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, CloudArrowUp, Cpu, DesktopTower, HouseLine, Lightning, Wrench } from "@phosphor-icons/react/dist/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RegulationGallery from "@/components/RegulationGallery";
+import { absoluteUrl, pageMetadata, siteUrl } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({
+  title: "Dálkové programování regulací a MaR",
+  description: "Návrh, dodávka a vzdálené programování regulace Technische Alternative. Místní elektrikář zapojí systém, SUNPOWER jej na dálku spustí a odladí.",
+  path: "/dalkove-programovani-regulaci",
+  image: "/images/regulation-heating-choice-cropped.png",
+});
 
 const steps = [
   ["01", "Návrh koncepce", "Vytvoříme hydraulické schéma zapojení, popíšeme komponenty a přidělíme jim jednoznačné kódy."],
@@ -14,8 +23,9 @@ const steps = [
 
 const controls = ["Topení a chlazení", "Tepelná čerpadla a zdroje", "Fotovoltaika a ukládání energie", "Rekuperace a vzduchotechnika", "Spotřebiče, žaluzie a zavlažování", "Nabíjení automobilů a baterií"];
 export default function RemoteProgrammingPage() {
+  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "@id": `${siteUrl}/dalkove-programovani-regulaci#service`, name: "Dálkové programování regulací a MaR", description: metadata.description, url: absoluteUrl("/dalkove-programovani-regulaci"), provider: { "@id": `${siteUrl}/#organization` }, areaServed: ["CZ", "SK"], serviceType: "Měření a regulace budov" };
   return <><Header /><main className="remote-page">
-    <section className="remote-hero"><div className="container remote-hero-grid"><div><h1>Specialista nemusí být na stavbě.</h1><p>Kompletní koncepce regulace pro vzdálený přístup a instalaci běžným elektrikářem. Od návrhu schématu přes hardware až po vzdálené odladění provozu.</p><div className="hero-actions"><Link className="button button-gold" href="/#poptavka">Chci navrhnout řešení <ArrowRight /></Link><a className="plain-link" href="tel:+420734571415">+420 734 571 415</a></div></div><div className="remote-hero-image"><Image src="/images/regulation-heating-choice-cropped.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Webové rozhraní dálkového řízení vytápění" priority /></div></div></section>
+    <section className="remote-hero"><div className="container remote-hero-grid"><div><h1>Specialista nemusí být na stavbě.</h1><p>Kompletní koncepce regulace pro vzdálený přístup a instalaci běžným elektrikářem. Od návrhu schématu přes hardware až po vzdálené odladění provozu.</p><div className="hero-actions"><Link className="button button-gold" href="/#poptavka">Chci navrhnout řešení <ArrowRight /></Link><a className="plain-link" href="tel:+420603516197">+420 603 516 197</a></div></div><div className="remote-hero-image"><Image src="/images/regulation-heating-choice-cropped.png" fill sizes="(max-width: 800px) 100vw, 50vw" alt="Webové rozhraní dálkového řízení vytápění" priority /></div></div></section>
 
     <section className="product-resources"><div className="container"><h2>Podklady a software</h2><div className="resource-links resource-links-sunpower"><Link href="/vice-o-sunpower">Více o SUNPOWER</Link><a href="https://www.ta.co.at/en/downloads/documents">Dokumentace Technische Alternative</a><a href="https://www.ta.co.at/en/downloads/software">Software Technische Alternative</a></div></div></section>
     <section className="remote-steps"><div className="container"><div className="section-head"><div><h2>Jak spolupráce funguje</h2></div></div><div className="remote-step-grid">{steps.map(([number,title,text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
@@ -27,5 +37,5 @@ export default function RemoteProgrammingPage() {
     <section className="remote-gallery"><div className="container"><div className="section-head"><div><h2>Přehledné ovládání odkudkoliv</h2></div></div><RegulationGallery /></div></section>
 
     <section className="partner-call"><div className="container partner-call-grid"><div><h2>Montujete elektro, topení nebo tepelná čerpadla?</h2><p>Provedeme základní zaškolení, dodáme hardware s partnerským rabatem a v případě potřeby zajistíme programování i tvorbu vizualizací kompletně na dálku.</p></div><div className="partner-types"><span><Wrench /> Elektrikáři</span><span><HouseLine /> Instalatéři</span><span><Cpu /> Dodavatelé tepelných čerpadel</span><span><Lightning /> Fotovoltaické elektrárny</span></div><Link className="button button-light" href="/#poptavka">Chci s vámi spolupracovat <ArrowRight /></Link></div></section>
-  </main><Footer /></>;
+  </main><Footer /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} /></>;
 }

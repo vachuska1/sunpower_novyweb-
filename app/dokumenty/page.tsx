@@ -1,6 +1,10 @@
+import type { Metadata } from "next";
 import { FilePdf } from "@phosphor-icons/react/dist/ssr";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = pageMetadata({ title: "Dokumenty ke stažení", description: "Obchodní podmínky SUNPOWER a Klimastěna, poučení spotřebitele a formulář pro odstoupení od smlouvy.", path: "/dokumenty" });
 
 const documents = [
   ["Formulář – Odstoupení od smlouvy", "/documents/Formular-Odstoupeni-od-smlouvy.pdf"],

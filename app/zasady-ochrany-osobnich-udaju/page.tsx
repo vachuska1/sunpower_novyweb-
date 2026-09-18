@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Zásady ochrany osobních údajů | SUNPOWER",
-  description: "Zásady zpracování a ochrany osobních údajů společnosti SUNPOWER s.r.o.",
-};
+export const metadata: Metadata = pageMetadata({ title: "Zásady ochrany osobních údajů", description: "Zásady zpracování a ochrany osobních údajů společnosti SUNPOWER s.r.o.", path: "/zasady-ochrany-osobnich-udaju" });
 
 export default function PrivacyPolicy() {
   return <><Header /><main className="subpage legal-page">
@@ -86,7 +84,7 @@ export default function PrivacyPolicy() {
       <p>Změna cookies může mít za následek nedostupnost některých funkcí webových stránek nebo snížení uživatelského dojmu.</p>
 
       <h2>4. Kontakt</h2>
-      <p>A. V případě jakýchkoli dotazů, připomínek a žádostí týkajících se osobních údajů nebo těchto Zásad lze kontaktovat SUNPOWER s.r.o. prostřednictvím kontaktního formuláře, e-mailové adresy <a href="mailto:office@sunpower.cz">office@sunpower.cz</a> anebo adresy uvedené níže.</p>
+      <p>A. V případě jakýchkoli dotazů, připomínek a žádostí týkajících se osobních údajů nebo těchto Zásad lze kontaktovat SUNPOWER s.r.o. prostřednictvím kontaktního formuláře, e-mailové adresy <a href="mailto:info@sunpower.cz">info@sunpower.cz</a> anebo adresy uvedené níže.</p>
       <p><strong>SUNPOWER s.r.o.</strong><br />Kontaktní adresa: Jarošovská 840/II, 377 02 Jindřichův Hradec</p>
     </article>
   </main><Footer /></>;
