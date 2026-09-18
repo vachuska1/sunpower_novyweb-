@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import FloatingContact from "@/components/FloatingContact";
+import CookieConsent from "@/components/CookieConsent";
 import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -45,5 +46,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     contactPoint: { "@type": "ContactPoint", telephone: "+420603516197", email: "info@sunpower.cz", contactType: "customer service", availableLanguage: ["cs"] },
   };
   const website = { "@context": "https://schema.org", "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: siteName, inLanguage: "cs-CZ", publisher: { "@id": `${siteUrl}/#organization` } };
-  return <html lang="cs"><body>{children}<FloatingContact /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([organization, website]) }} /></body></html>;
+  const structuredData = { "@context": "https://schema.org", "@graph": [organization, website].map(({ "@context": _, ...item }) => item) };
+  return <html lang="cs"><body>{children}<FloatingContact /><CookieConsent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
