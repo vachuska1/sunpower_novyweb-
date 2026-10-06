@@ -10,6 +10,6 @@ export default function Footer() {
       <div><h3>Kontakt</h3><a href="mailto:info@sunpower.cz">info@sunpower.cz</a><br /><a href="tel:+420603516197">+420 603 516 197</a></div>
       <div><h3>Sledujte nás</h3><div className="socials"><a href="https://www.facebook.com/sunpowersro" aria-label="Facebook"><FacebookLogo /></a><a href="https://www.instagram.com/sunpower_cz/" aria-label="Instagram"><InstagramLogo /></a><a href="https://wa.me/420603516197" aria-label="WhatsApp"><WhatsappLogo /></a></div></div>
     </div>
-    <div className="copyright">© {new Date().getFullYear()} Sunpower s.r.o. · všechna práva vyhrazena · <Link href="/dokumenty">Dokumenty</Link></div>
+    <div className="copyright">© {new Date().getFullYear()} Sunpower s.r.o. · všechna práva vyhrazena · <Link href="/dokumenty">Dokumenty</Link><br />Web vytvořil <a href="https://weblepe.cz" rel="nofollow" className="hover:underline">Weblépe.cz</a></div>
   </footer>;
 }
