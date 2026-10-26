@@ -7,15 +7,14 @@ export default function ConsentMap() {
   const [allowed, setAllowed] = useState(false);
 
   useEffect(() => {
-    setAllowed(localStorage.getItem(consentKey) === "all");
+    setAllowed(localStorage.getItem(consentKey) === "all" || localStorage.getItem("sunpower-map-consent") === "allowed");
     const update = (event: Event) => setAllowed((event as CustomEvent<string>).detail === "all");
     window.addEventListener("sunpower-consent", update);
     return () => window.removeEventListener("sunpower-consent", update);
   }, []);
 
   function allowMap() {
-    localStorage.setItem(consentKey, "all");
-    window.dispatchEvent(new CustomEvent("sunpower-consent", { detail: "all" }));
+    localStorage.setItem("sunpower-map-consent", "allowed");
     setAllowed(true);
   }
 

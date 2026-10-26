@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import FloatingContact from "@/components/FloatingContact";
 import CookieConsent from "@/components/CookieConsent";
+import ConsentAnalytics from "@/components/ConsentAnalytics";
 import { defaultDescription, siteName, siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -47,5 +48,5 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
   const website = { "@context": "https://schema.org", "@type": "WebSite", "@id": `${siteUrl}/#website`, url: siteUrl, name: siteName, inLanguage: "cs-CZ", publisher: { "@id": `${siteUrl}/#organization` } };
   const structuredData = { "@context": "https://schema.org", "@graph": [organization, website].map(({ "@context": _, ...item }) => item) };
-  return <html lang="cs"><body>{children}<FloatingContact /><CookieConsent /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
+  return <html lang="cs"><body>{children}<FloatingContact /><CookieConsent /><ConsentAnalytics /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} /></body></html>;
 }
