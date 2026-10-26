@@ -10,13 +10,16 @@ import ProjectGallery from "@/components/ProjectGallery";
 import Partners from "@/components/Partners";
 import ConsentMap from "@/components/ConsentMap";
 import { services } from "@/lib/services";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, siteName } from "@/lib/seo";
 
-export const metadata: Metadata = pageMetadata({
-  title: "Energetická řešení, regulace a management",
+export const metadata: Metadata = {
+  ...pageMetadata({
+  title: siteName,
   description: "SUNPOWER navrhuje a realizuje energetické koncepce, řízení budov, vytápění, chlazení, akumulaci energie a energetický management.",
   path: "/",
-});
+  }),
+  title: { absolute: siteName },
+};
 
 export default function Home() {
   return <><Header /><main>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const siteUrl = "https://sunpower.cz";
-export const siteName = "SUNPOWER";
+export const siteName = "Sunpower s.r.o.";
 export const defaultDescription = "Energetické koncepce, chytré řízení budov, vytápění, chlazení a energetický management pro domy i komerční objekty.";
 
 type PageMetadata = {
